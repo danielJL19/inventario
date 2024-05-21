@@ -13,3 +13,21 @@
  *= require_tree .
  *= require_self
  */
+ @import "bootstrap";
+ @import "jquery-ui.css";
+
+ .bg-layout{
+  background-image: image-url('economia.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+ }
+
+ .flex1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // align-content: center;
+  // align-self: center;
+  height: 100vh;
+ }

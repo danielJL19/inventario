@@ -67,3 +67,17 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem "devise", "~> 4.9"
+gem "bootstrap"
+
+gem "sassc-rails"
+
+# Use jquery as the JavaScript librar
+gem 'jquery-rails'
+
+# Use jquery-ui for pretty UI
+gem 'jquery-ui-rails'
+gem 'i18n'
+gem 'rails-i18n'
+gem "view_component"

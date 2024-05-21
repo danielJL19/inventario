@@ -1,0 +1,34 @@
+es: 
+  activerecord: 
+    errors:
+      messages:
+        blank: "no puede estar en blanco"
+    models:
+      provider: Proveedor
+      category: Categoría
+      movement: Movimiento
+      product: Producto
+      user: Usuario
+    attributes:
+      provider:
+        name: "Nombre"
+        phone: "Número de celular"
+        address: "Dirección"
+      product: 
+        name: "Nombre"
+        description: "Descripción"
+        serial_number: "Número de serie"
+        unit_cost: "Unidad de costo"
+        sale_price: "Precio de venta"
+        amount: "Cantidad"
+        category: "Categoría"
+        provider: "Proveedor"
+      category: 
+        name: "Nombre"
+  new_provider: "Nuevo Proveedor"
+  new_product: "Nuevo Producto"
+  new_movement: "Nuevo Movimiento"
+  new_category: "Nueva Categoría"
+  products: "Productos"
+  providers: "Proveedores"
+  categories: "Categorías"

@@ -1,0 +1,55 @@
+<div id="form" class="d-flex justify-content-center">
+  <div class="col-md-12 p-3">
+    <%= form_with model: product, data: {controller: 'shared--slim'} do |form| %>
+      <% if product.errors.any?%>
+        <%= render(Shared::ErrorMessageComponent.new(object: product)) %>
+        
+      <% end %>
+
+      <div class="mb-3">
+        <%= form.label :name, class:'form-label' %>
+        <%= form.text_field :name, class:'form-control' %>
+      </div>
+      <div class="form-floating mb-3">
+        <%= form.text_area :description, class:'form-control', id: 'floatingTextArea2' %>
+        <%= form.label :description,class:'form-floating', for: 'floatingTextArea2' %>
+      </div>
+      <div class="d-flex flex-column flex-md-row flex-wrap">
+        <div class="col-md-3 mb-3">
+          <%= form.label :serial_number, class:'form-label' %>
+          <%= form.number_field :serial_number, class:'form-control',min:0%>
+        </div>
+        <div class="col-md-3 mb-3">
+          <%= form.label :unit_cost, class:'form-label' %>
+          <%= form.number_field :unit_cost, class:'form-control',min:0 %>
+        </div>
+        <div class="col-md-3 mb-3">
+          <%= form.label :sale_price, class:'form-label' %>
+          <%= form.number_field :sale_price, class:'form-control', min:0 %>
+        </div>
+        <div class="col-md-3 mb-3">
+          <%= form.label :amount, class:'form-label' %>
+          <%= form.number_field :amount, class:'form-control', min:0 %>
+        </div>
+      </div>
+      <div class="mb-3">
+        <%= form.label :category_id %>
+        <%= form.select("category_id", Category.pluck(:name,:id), {:prompt=>'Selecciona una categoría'}, {:class => "form-select"} ) %>
+        
+      </div>
+      <div class="mb-3">
+        <%= form.label :provider_id %>
+        <%= form.select("provider_id", Provider.pluck(:name, :id), { :prompt=> 'Selecciona un Proveedor' }, { class: 'form-select', data: { slim_target: 'field' } }) %>
+
+      </div>
+      <div class="row">
+        <div class="col">
+          <%= form.submit class:'btn btn-success' %>
+        </div>
+        <div class="col">
+          <button class="btn btn-primary">Salir</button>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

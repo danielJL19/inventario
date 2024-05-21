@@ -1,0 +1,7 @@
+
+<div class="bg-danger rounded pt-1 pb-1">
+    <% @object.errors.full_messages.each do |error| %>
+      <p class="px-3 text-white"> <%= error %> </p>
+    <% end %>
+</div>
+

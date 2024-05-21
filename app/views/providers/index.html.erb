@@ -1,0 +1,17 @@
+<h1 class="my-3"><%=t :providers  %></h1>
+<%= link_to "Crear Proveedor", new_provider_path, class:'btn btn-success mb-3'  %>
+
+<div class="d-flex flex-column flex-md-row gap-5 flex-wrap">
+
+  <% @providers.each do |provider|  %>
+    <div class="card col-md-3">
+      <div class="card-body">
+        <h5 class="card-title text-center"><%= provider.name %></h5>
+        <h6 class="card-subtitle mb-2 text-body-secondary text-center"><%= provider.id %></h6>
+        <p class="card-text text-center"> <%= provider.address %> </p>
+        <p class="text-center"><%= provider.phone %> </p>
+      </div>
+    </div>
+  <% end %>
+
+</div>

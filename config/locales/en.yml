@@ -29,3 +29,8 @@
 
 en:
   hello: "Hello world"
+  new_provider: "New provider"
+  new_product: "New product"
+  products: "Products"
+  providers: "Providers"
+  categories: "Categories"

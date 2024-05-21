@@ -1,0 +1,25 @@
+<h1>Productos</h1>
+<%= link_to "Crear Producto", new_product_path,class:'btn btn-success mb-3', data: {controller: 'new-modal'} %>
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Numero de serie</th>
+                <th scope="col">Categoría</th>
+                <th scope="col">Proveedor</th>
+                <th scope="col">Stock</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <%= render @products %>
+
+        </tbody>
+    </table>
+</div>
+<%= link_to "Salir sesión", destroy_user_session_path, class:'btn btn-primary', data: {turbo_method: :delete} %>
+<button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+    OCULTAR
+</button>
+
