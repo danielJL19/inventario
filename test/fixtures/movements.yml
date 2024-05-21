@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type_movement: 1
+  amount: 1
+  reason: MyString
+  product: one
+
+two:
+  type_movement: 1
+  amount: 1
+  reason: MyString
+  product: two

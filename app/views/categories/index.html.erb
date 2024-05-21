@@ -1,0 +1,20 @@
+<h1 class="mb-3">Categorias</h1>
+
+<%= link_to "Crear Categoría", new_category_path, class:'btn btn-info text-white mb-3', data: {controller: 'new-modal', turbo_frame: :modal} %>
+<%= link_to "Cerrar sesión", destroy_user_session_path, class:'btn btn-danger text-white mb-3', data: {turbo_method: :delete, controller: 'new-modal'} %>
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Fecha de creación </th>
+        <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render @categories %>
+    </tbody>
+  </table>
+
+</div>

@@ -1,0 +1,11 @@
+<tr>
+          <th scope="row"> <%= category.id %> </th>
+          <td> <%= category.name %> </td>
+          <td> <%= category.created_at %> </td>
+          <td> 
+            <div class="d-flex gap-2">
+              <%= link_to "Eliminar", category_path(category), class:'btn btn-danger text-white', method: :delete %>
+              <%= link_to "Editar", edit_category_path(category), class:'btn btn-primary text-white' %>
+            </div>
+          </td>
+</tr>

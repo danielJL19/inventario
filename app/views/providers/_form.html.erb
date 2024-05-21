@@ -1,0 +1,26 @@
+<%= form_with model: provider do |form| %>
+  <% if provider.errors.any?  %>
+      <div class="bg-danger rounded pt-1">
+        <% provider.errors.full_messages.each do |error| %>
+          <p class="px-3 text-white"> <%= error %> </p>
+          <% end %>
+      </div>
+  <% end %>
+
+
+  <div class="mb-3">
+    <%= form.label :name, class:'form-label' %>
+    <%= form.text_field :name, class:'form-control' %>
+  </div>
+  <div class="mb-3">
+    <%= form.label :phone, class:'form-label' %>
+    <%= form.text_field :phone, class:'form-control' %>
+  </div>
+  <div class="mb-3">
+    <%= form.label :address, class:'form-label' %>
+    <%= form.text_field :address, class:'form-control' %>
+  </div>
+  <div class="mb-3">
+    <%= form.submit class:'btn btn-success' %>
+  </div>
+<% end %>

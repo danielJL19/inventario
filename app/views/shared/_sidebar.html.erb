@@ -1,0 +1,73 @@
+<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion justify-content-evenly" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <%= link_to authenticated_root_path, class:'sidebar-brand d-flex align-items-center justify-content-center' do %>
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-laugh-wink"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">Inventario <sup>2</sup></div>
+            <% end %>
+           
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <%= link_to products_path, class:'nav-link' do  %>
+                
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span> Dashboard</span>
+                
+                <% end %>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <%= link_to products_path, class:"nav-link" do  %>
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span> <%= t :products %> </span>
+                <% end %>
+                
+            </li>
+
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+
+                <%= link_to providers_path, class:"nav-link" do %>
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span> <%= t :providers %></span>
+                <% end %>
+
+
+                
+            </li>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <%= link_to categories_path, class:'nav-link' do %>
+                        <i class="fas fa-fw fa-table"></i>
+                        <span> <%= t :categories %> </span>
+                <% end %>
+
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+            <!-- Sidebar Message -->
+            <div>
+                <p class="text-center text-white fw-bold"> <%= current_user&.email %> </p>
+            </div>
+
+        
+
+</ul>

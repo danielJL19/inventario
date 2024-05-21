@@ -1,0 +1,33 @@
+<div class="d-flex justify-content-center">
+  <div class="col-md-10 border border-light-subtle rounded p-3">
+    <%= form_with model: @movement, url: change_stock_product_path(@product) do |form| %>
+      <% if @movement.errors.any?  %>
+        <div class="bg-danger rounded pt-1 pb-1">
+          <% @movement.errors.full_messages.each do |error| %>
+            <p class="px-3 text-white"> <%= error %> </p>
+          <% end %>
+        </div>
+      <% end %>
+      
+      <div class="mb-3">
+        <%= form.label :reason, class:'form-label' %>
+        <%= form.text_field :reason, class:'form-control' %>
+      </div>
+      
+      <div class="d-flex justify-content-center">
+        <div class="col-md-4 mb-3">
+          <%= form.label :type_movement, class:'form-label' %>
+          <%= form.select :type_movement, options_for_select({"Añadir"=> "1", "Disminuir" => "2"}),{}, {:class => "form-select"} %>
+        </div>
+        <div class="col-md-4 mb-3">
+          <%= form.label :amount, class:'form-label' %>
+          <%= form.number_field :amount, class:'form-control' %>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <%= form.submit class:'btn btn-success' %>
+      </div>
+    <% end %>
+  </div>
+</div>

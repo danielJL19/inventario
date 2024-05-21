@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyString
+  serial_number: 1
+  unit_cost: 1
+  sale_price: 1
+  category: one
+  amount: 1
+  provider: one
+
+two:
+  name: MyString
+  description: MyString
+  serial_number: 1
+  unit_cost: 1
+  sale_price: 1
+  category: two
+  amount: 1
+  provider: two
